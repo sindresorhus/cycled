@@ -1,0 +1,40 @@
+{
+	"name": "cycled",
+	"version": "0.0.0",
+	"description": "Cycle through the items of an array",
+	"license": "MIT",
+	"repository": "sindresorhus/cycled",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "sindresorhus.com"
+	},
+	"engines": {
+		"node": ">=6"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"cycle",
+		"cycled",
+		"iterable",
+		"iterables",
+		"array",
+		"item",
+		"next",
+		"previous",
+		"loop",
+		"repeat",
+		"value",
+		"values",
+		"iterator"
+	],
+	"devDependencies": {
+		"ava": "*",
+		"xo": "*"
+	}
+}
