@@ -58,7 +58,7 @@ module.exports = class Cycled {
 	indexOf(...args) {
 		return this._array.indexOf(...args);
 	}
-	
+
 	push(...args) {
 		return this._array.push(...args);
 	}

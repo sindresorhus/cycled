@@ -49,7 +49,6 @@ test('.indexOf()', t => {
 	t.is(c.indexOf(3), 2);
 });
 
-
 test('.push()', t => {
 	const c = new Cycled(fixture);
 	t.is(c.size, 3);
