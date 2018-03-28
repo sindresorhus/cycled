@@ -25,7 +25,7 @@ module.exports = class Cycled {
 	}
 
 	set index(i) {
-		this._index = (this.size + i) % this.size;
+		this._index = (this.size + (i % this.size)) % this.size;
 	}
 
 	step(steps) {
