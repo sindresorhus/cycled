@@ -49,6 +49,14 @@ test('.indexOf()', t => {
 	t.is(c.indexOf(3), 2);
 });
 
+
+test('.push()', t => {
+	const c = new Cycled(fixture);
+	t.is(c.size, 3);
+	c.push(4);
+	t.is(c.size, 4);
+});
+
 test('iterable', t => {
 	const c = new Cycled(fixture);
 	t.is(c[Symbol.iterator]().next().value, 2);
