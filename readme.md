@@ -44,6 +44,8 @@ cycled.previous();
 
 ### `cycled = new Cycled(input)`
 
+Initiates an array subclass with the methods documented below. Since it's an array, you can use all the normal array methods on it.
+
 #### input
 
 Type: `Array`
@@ -68,10 +70,6 @@ Returns the previous item.
 
 Returns the item by going the given amount of `steps` through the array. For example, calling `steps(2)` is like calling `next()` twice. You go backward by specifying a negative number.
 
-#### size
-
-Get the size.
-
 #### index
 
 Get or set the current index.
@@ -79,10 +77,6 @@ Get or set the current index.
 #### reversed()
 
 Returns an iterable that will cycle through the array backward indefinitely.
-
-#### indexOf()
-
-Same as `Array#indexOf()`.
 
 
 ## License
