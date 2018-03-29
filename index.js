@@ -1,12 +1,12 @@
 'use strict';
 
-module.exports = class Cycled {
+module.exports = class Cycled extends Array {
 	constructor(array) {
 		if (!Array.isArray(array)) {
 			throw new TypeError('Expected an array');
 		}
 
-		this._array = array;
+		super(...array);
 		this._index = 0;
 	}
 
@@ -16,21 +16,17 @@ module.exports = class Cycled {
 		}
 	}
 
-	get size() {
-		return this._array.length;
-	}
-
 	get index() {
 		return this._index;
 	}
 
-	set index(i) {
-		this._index = (this.size + (i % this.size)) % this.size;
+	set index(index) {
+		this._index = (this.length + (index % this.length)) % this.length;
 	}
 
 	step(steps) {
-		this._index = (this.size + this._index + steps) % this.size;
-		return this._array[this._index];
+		this._index = (this.length + this._index + steps) % this.length;
+		return this[this._index];
 	}
 
 	current() {
@@ -52,10 +48,5 @@ module.exports = class Cycled {
 				yield _this.previous();
 			}
 		};
-	}
-
-	// Proxy some useful array methods
-	indexOf(...args) {
-		return this._array.indexOf(...args);
 	}
 };

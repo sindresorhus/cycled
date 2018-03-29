@@ -26,11 +26,6 @@ test('.step()', t => {
 	t.is(c.step(-2), 1);
 });
 
-test('.size', t => {
-	const c = new Cycled(fixture);
-	t.is(c.size, 3);
-});
-
 test('.index', t => {
 	const c = new Cycled(fixture);
 	t.is(c.index, 0);
