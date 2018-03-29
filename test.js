@@ -37,6 +37,9 @@ test('.index', t => {
 	c.index = 2;
 	t.is(c.index, 2);
 	t.is(c.current(), 3);
+	c.index = -7;
+	t.is(c.index, 2);
+	t.is(c.current(), 3);
 });
 
 test('.reversed()', t => {
