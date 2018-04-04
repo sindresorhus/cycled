@@ -52,7 +52,14 @@ Type: `Array`
 
 ### cycled
 
-The instance is an iterable that will cycle through the array indefinitely.
+The instance is an iterable that will cycle through the array. It will cycle through the number of elements equaling the length of the array from the current index.
+
+```js
+const numberCycle = new Cycled([1,2,3,4,5]);
+
+console.log(...numberCycle);
+//=> 2 3 4 5 1
+```
 
 #### current()
 
@@ -74,7 +81,10 @@ Returns the item by going the given amount of `steps` through the array. For exa
 
 Get or set the current index.
 
-#### reversed()
+#### indefinitely() 
+Returns an iterable that will cycle through the array indefinitely.
+
+#### indefinitelyReversed()
 
 Returns an iterable that will cycle through the array backward indefinitely.
 
