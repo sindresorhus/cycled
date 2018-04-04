@@ -11,7 +11,8 @@ module.exports = class Cycled extends Array {
 	}
 
 	* [Symbol.iterator]() {
-		while (true) {
+		let i = this.length;
+		while (i-- > 0) {
 			yield this.next();
 		}
 	}
@@ -44,7 +45,8 @@ module.exports = class Cycled extends Array {
 	get reversed() {
 		const _this = this;
 		return function * () {
-			while (true) {
+			let i = this.length;
+			while (i-- > 0) {
 				yield _this.previous();
 			}
 		};
