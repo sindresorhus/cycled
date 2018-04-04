@@ -51,3 +51,11 @@ test('iterable', t => {
 	const c = new Cycled(fixture);
 	t.is(c[Symbol.iterator]().next().value, 2);
 });
+
+test('iterate', t => {
+	const c = new Cycled(fixture);
+	let i = 0;
+	for (const item of fixture) {
+		t.is(item, c[i++]);
+	}
+});
