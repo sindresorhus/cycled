@@ -37,9 +37,14 @@ test('.index', t => {
 	t.is(c.current(), 3);
 });
 
-test('.reversed()', t => {
+test('.indefinitely()', t => {
 	const c = new Cycled(fixture);
-	t.is(c.reversed().next().value, 3);
+	t.is(c.indefinitely().next().value, 2);
+});
+
+test('.indefinitelyReversed()', t => {
+	const c = new Cycled(fixture);
+	t.is(c.indefinitelyReversed().next().value, 3);
 });
 
 test('.indexOf()', t => {
@@ -50,4 +55,9 @@ test('.indexOf()', t => {
 test('iterable', t => {
 	const c = new Cycled(fixture);
 	t.is(c[Symbol.iterator]().next().value, 2);
+});
+
+test('iterations on destructuring', t => {
+	const c = new Cycled(fixture);
+	t.deepEqual([...c], [2, 3, 1]);
 });
