@@ -54,10 +54,13 @@ test('.indexOf()', t => {
 
 test('iterable', t => {
 	const c = new Cycled(fixture);
-	t.is(c[Symbol.iterator]().next().value, 2);
+	t.is(c[Symbol.iterator]().next().value, 1);
 });
 
 test('iterations on destructuring', t => {
 	const c = new Cycled(fixture);
+	t.deepEqual([...c], fixture);
+	t.deepEqual([...c], fixture);
+	c.next();
 	t.deepEqual([...c], [2, 3, 1]);
 });

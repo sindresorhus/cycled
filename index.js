@@ -14,7 +14,8 @@ module.exports = class Cycled extends Array {
 		let {length} = this;
 
 		while (length-- > 0) {
-			yield this.next();
+			yield this.current();
+			this.index++;
 		}
 	}
 

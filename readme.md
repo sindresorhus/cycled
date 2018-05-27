@@ -58,7 +58,7 @@ The instance is an iterable that will cycle through the array. It will cycle thr
 const numberCycle = new Cycled([1,2,3,4,5]);
 
 console.log(...numberCycle);
-//=> 2 3 4 5 1
+//=> 1 2 3 4 5
 ```
 
 #### current()
