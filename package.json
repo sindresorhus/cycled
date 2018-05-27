@@ -1,6 +1,6 @@
 {
 	"name": "cycled",
-	"version": "0.2.0",
+	"version": "1.0.0",
 	"description": "Cycle through the items of an array",
 	"license": "MIT",
 	"repository": "sindresorhus/cycled",
