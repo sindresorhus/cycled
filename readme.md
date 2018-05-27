@@ -81,7 +81,7 @@ Returns the item by going the given amount of `steps` through the array. For exa
 
 Get or set the current index.
 
-#### indefinitely() 
+#### indefinitely()
 
 Returns an iterable that will cycle through the array indefinitely.
 

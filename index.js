@@ -18,12 +18,6 @@ module.exports = class Cycled extends Array {
 		}
 	}
 
-	* indefinitely() {
-		while (true) {
-			yield this.next();
-		}
-	}
-
 	get index() {
 		return this._index;
 	}
@@ -49,10 +43,15 @@ module.exports = class Cycled extends Array {
 		return this.step(-1);
 	}
 
-	* indefinitelyReversed() {
-		const _this = this;
+	* indefinitely() {
 		while (true) {
-			yield _this.previous();
+			yield this.next();
+		}
+	}
+
+	* indefinitelyReversed() {
+		while (true) {
+			yield this.previous();
 		}
 	}
 };
