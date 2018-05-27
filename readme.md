@@ -90,6 +90,48 @@ Returns an iterable that will cycle through the array indefinitely.
 Returns an iterable that will cycle through the array backward indefinitely.
 
 
+## Example
+
+Here we create a simple tab component that can have the active view set or go forward/backward through the tabs.
+
+```js
+const Cycled = require('cycled');
+
+class TabComponent {
+	constructor(views) {
+		this.activeView = views[0];
+		this.views = new Cycled(views);
+	}
+
+	setActiveView(view) {
+		this.activeView = view;
+		this.views.index = this.views.indexOf(view);
+	}
+
+	nextView() {
+		setActiveView(this.views.next());
+	}
+
+	previousView() {
+		setActiveView(this.views.previous());
+	}
+}
+
+const tabs = new TabComponent([
+	'Homepage',
+	'Blog',
+	'Projects',
+	'Contact'
+]);
+
+// …
+
+nextButton.addEventListener('click', () => {
+	tabs.nextView();
+});
+```
+
+
 ## License
 
 MIT © [Sindre Sorhus](https://sindresorhus.com)
