@@ -75,7 +75,7 @@ Returns the previous item.
 
 #### step(steps)
 
-Returns the item by going the given amount of `steps` through the array. For example, calling `steps(2)` is like calling `next()` twice. You go backward by specifying a negative number.
+Returns the item by going the given amount of `steps` through the array. For example, calling `step(2)` is like calling `next()` twice. You go backward by specifying a negative number.
 
 #### index
 
