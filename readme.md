@@ -42,13 +42,15 @@ cycled.previous();
 
 ## API
 
-### `cycled = new Cycled(input)`
+### `cycled = new Cycled(array)`
 
 Initiates an array subclass with the methods documented below. Since it's an array, you can use all the normal array methods on it.
 
-#### input
+#### array
 
 Type: `Array`
+
+The array to wrap.
 
 ### cycled
 
