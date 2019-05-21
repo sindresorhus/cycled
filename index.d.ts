@@ -49,7 +49,7 @@ declare class Cycled<T> extends Array<T> {
 	});
 	```
 	*/
-	constructor(array: T[]);
+	constructor(elements: readonly T[]);
 
 	/**
 	Get or set the current index.

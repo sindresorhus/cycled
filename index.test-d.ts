@@ -17,7 +17,7 @@ class TabComponent {
 	views: Cycled<string>;
 	activeView: string;
 
-	constructor(views: string[]) {
+	constructor(views: readonly string[]) {
 		this.activeView = views[0];
 		this.views = new Cycled(views);
 	}
