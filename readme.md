@@ -11,10 +11,6 @@ This package can be useful for cycling through tabs, images of a slideshows, etc
 $ npm install cycled
 ```
 
-<a href="https://www.patreon.com/sindresorhus">
-	<img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
-</a>
-
 
 ## Usage
 
@@ -132,8 +128,3 @@ nextButton.addEventListener('click', () => {
 	tabs.nextView();
 });
 ```
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)
