@@ -77,6 +77,11 @@ declare class Cycled<T> extends Array<T> {
 	step(steps: number): T;
 
 	/**
+	Returns the item that is located in the given amount of `steps` through the array. For example, calling `peek(2)` would get the item 2 items after the current one. You go backward by specifying a negative number.
+	*/
+	peek(steps: number): T;
+
+	/**
 	Returns an iterable that will cycle through the array indefinitely.
 	*/
 	indefinitely(): IterableIterator<T>;

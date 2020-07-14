@@ -32,6 +32,10 @@ module.exports = class Cycled extends Array {
 		return this[this._index];
 	}
 
+	peek(steps) {
+		return this[(this.length + this._index + steps) % this.length];
+	}
+
 	current() {
 		return this.step(0);
 	}
