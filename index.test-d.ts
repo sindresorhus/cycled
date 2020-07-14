@@ -9,6 +9,7 @@ expectType<number>(cycled.current());
 expectType<number>(cycled.next());
 expectType<number>(cycled.previous());
 expectType<number>(cycled.step(10));
+expectType<number>(cycled.peek(10));
 expectType<IterableIterator<number>>(cycled.indefinitely());
 expectType<IterableIterator<number>>(cycled.indefinitelyReversed());
 expectType<number[]>([...cycled]);
