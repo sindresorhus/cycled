@@ -77,7 +77,7 @@ declare class Cycled<T> extends Array<T> {
 	step(steps: number): T;
 
 	/**
-	Like Cycled#step but without mutating the array.
+	Returns the item that is located in the given amount of `steps` through the array. For example, calling `peek(2)` would get the item 2 items after the current one. You go backward by specifying a negative number. This works like Cycled#step but without changing the current item.
 	*/
 	peek(steps: number): T;
 
