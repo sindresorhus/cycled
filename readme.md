@@ -77,7 +77,9 @@ Returns the item by going the given amount of `steps` through the array. For exa
 
 #### peek(steps)
 
-Returns the item that is located in the given amount of `steps` through the array. For example, calling `peek(2)` would get the item 2 items after the current one. You go backward by specifying a negative number. This works like Cycled#step but without changing the current item.
+Returns the item that is located in the given amount of `steps` through the array. For example, calling `peek(2)` would get the item 2 items after the current one. You go backward by specifying a negative number.
+
+This method is similar to `.step()` but without changing the current item.
 
 #### index
 
