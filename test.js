@@ -26,6 +26,12 @@ test('.step()', t => {
 	t.is(c.step(-2), 1);
 });
 
+test('.peek()', t => {
+	const c = new Cycled(fixture);
+	t.is(c.peek(1), 2);
+	t.is(c.peek(-2), 2);
+});
+
 test('.index', t => {
 	const c = new Cycled(fixture);
 	t.is(c.index, 0);
