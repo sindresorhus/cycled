@@ -1,16 +1,14 @@
-# cycled [![Build Status](https://travis-ci.org/sindresorhus/cycled.svg?branch=master)](https://travis-ci.org/sindresorhus/cycled)
+# cycled [![Build Status](https://travis-ci.com/sindresorhus/cycled.svg?branch=master)](https://travis-ci.com/github/sindresorhus/cycled)
 
 > Cycle through the items of an array
 
-This package can be useful for cycling through tabs, images of a slideshows, etc.
-
+This package can be useful for cycling through tabs, images of slideshows, etc.
 
 ## Install
 
 ```
 $ npm install cycled
 ```
-
 
 ## Usage
 
@@ -35,7 +33,6 @@ cycled.previous();
 //=> 3
 ```
 
-
 ## API
 
 ### `cycled = new Cycled(array)`
@@ -53,7 +50,7 @@ The array to wrap.
 The instance is an iterable that will cycle through the array. It will cycle through the number of elements equaling the length of the array from the current index.
 
 ```js
-const numberCycle = new Cycled([1,2,3,4,5]);
+const numberCycle = new Cycled([1, 2, 3, 4, 5]);
 
 console.log(...numberCycle);
 //=> 1 2 3 4 5
@@ -92,7 +89,6 @@ Returns an iterable that will cycle through the array indefinitely.
 #### indefinitelyReversed()
 
 Returns an iterable that will cycle through the array backward indefinitely.
-
 
 ## Example
 

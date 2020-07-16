@@ -10,7 +10,7 @@ declare class Cycled<T> extends Array<T> {
 	```
 	import Cycled = require('cycled');
 
-	const numberCycle = new Cycled([1,2,3,4,5]);
+	const numberCycle = new Cycled([1, 2, 3, 4, 5]);
 
 	console.log(...numberCycle);
 	//=> 1 2 3 4 5
@@ -72,12 +72,16 @@ declare class Cycled<T> extends Array<T> {
 	previous(): T;
 
 	/**
-	Returns the item by going the given amount of `steps` through the array. For example, calling `step(2)` is like calling `next()` twice. You go backward by specifying a negative number.
+	Returns the item by going the given amount of `steps` through the array. For example, calling `step(2)` is like calling `next()` twice.
+
+	You go backward by specifying a negative number.
 	*/
 	step(steps: number): T;
 
 	/**
-	Returns the item that is located in the given amount of `steps` through the array. For example, calling `peek(2)` would get the item 2 items after the current one. You go backward by specifying a negative number.
+	Returns the item that is located in the given amount of `steps` through the array. For example, calling `peek(2)` would get the item 2 items after the current one.
+
+	You go backward by specifying a negative number.
 
 	This method is similar to `.step()` but without changing the current item.
 	*/

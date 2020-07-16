@@ -4,10 +4,11 @@
 	"description": "Cycle through the items of an array",
 	"license": "MIT",
 	"repository": "sindresorhus/cycled",
+	"funding": "https://github.com/sponsors/sindresorhus",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
-		"url": "sindresorhus.com"
+		"url": "https://sindresorhus.com"
 	},
 	"engines": {
 		"node": ">=6"
