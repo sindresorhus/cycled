@@ -1,4 +1,4 @@
-# cycled [![Build Status](https://travis-ci.com/sindresorhus/cycled.svg?branch=master)](https://travis-ci.com/github/sindresorhus/cycled)
+# cycled
 
 > Cycle through the items of an array
 
