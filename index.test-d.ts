@@ -1,5 +1,5 @@
 import {expectType} from 'tsd';
-import Cycled = require('.');
+import Cycled from './index.js';
 
 const cycled = new Cycled([1, 2, 3]);
 expectType<Cycled<number>>(cycled);
@@ -15,24 +15,24 @@ expectType<IterableIterator<number>>(cycled.indefinitelyReversed());
 expectType<number[]>([...cycled]);
 
 class TabComponent {
-	views: Cycled<string>;
-	activeView: string;
+	#activeView: string;
+	#views: Cycled<string>;
 
 	constructor(views: readonly string[]) {
-		this.activeView = views[0];
-		this.views = new Cycled(views);
+		this.#activeView = views[0];
+		this.#views = new Cycled(views);
 	}
 
 	setActiveView(view: string) {
-		this.activeView = view;
-		this.views.index = this.views.indexOf(view);
+		this.#activeView = view;
+		this.#views.index = this.#views.indexOf(view);
 	}
 
 	nextView() {
-		this.setActiveView(this.views.next());
+		this.setActiveView(this.#views.next());
 	}
 
 	previousView() {
-		this.setActiveView(this.views.previous());
+		this.setActiveView(this.#views.previous());
 	}
 }

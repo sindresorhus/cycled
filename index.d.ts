@@ -1,4 +1,9 @@
-declare class Cycled<T> extends Array<T> {
+export default class Cycled<T> extends Array<T> {
+	/**
+	Get or set the current index.
+	*/
+	index: number;
+
 	/**
 	Initiates an array subclass with the methods documented below.
 	Since it's an array, you can use all the normal array methods on it.
@@ -8,7 +13,7 @@ declare class Cycled<T> extends Array<T> {
 
 	@example
 	```
-	import Cycled = require('cycled');
+	import Cycled from 'cycled';
 
 	const numberCycle = new Cycled([1, 2, 3, 4, 5]);
 
@@ -16,22 +21,25 @@ declare class Cycled<T> extends Array<T> {
 	//=> 1 2 3 4 5
 
 	class TabComponent {
+		#activeView;
+		#views;
+
 		constructor(views) {
-			this.activeView = views[0];
-			this.views = new Cycled(views);
+			this.#activeView = views[0];
+			this.#views = new Cycled(views);
 		}
 
 		setActiveView(view) {
-			this.activeView = view;
-			this.views.index = this.views.indexOf(view);
+			this.#activeView = view;
+			this.#views.index = this.#views.indexOf(view);
 		}
 
 		nextView() {
-			setActiveView(this.views.next());
+			setActiveView(this.#views.next());
 		}
 
 		previousView() {
-			setActiveView(this.views.previous());
+			setActiveView(this.#views.previous());
 		}
 	}
 
@@ -50,11 +58,6 @@ declare class Cycled<T> extends Array<T> {
 	```
 	*/
 	constructor(elements: readonly T[]);
-
-	/**
-	Get or set the current index.
-	*/
-	index: number;
 
 	/**
 	Returns the current item.
@@ -97,5 +100,3 @@ declare class Cycled<T> extends Array<T> {
 	*/
 	indefinitelyReversed(): IterableIterator<T>;
 }
-
-export = Cycled;

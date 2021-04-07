@@ -13,7 +13,7 @@ $ npm install cycled
 ## Usage
 
 ```js
-const Cycled = require('cycled');
+import Cycled from 'cycled';
 
 const cycled = new Cycled([1, 2, 3]);
 
@@ -50,6 +50,8 @@ The array to wrap.
 The instance is an iterable that will cycle through the array. It will cycle through the number of elements equaling the length of the array from the current index.
 
 ```js
+import Cycled from 'cycled';
+
 const numberCycle = new Cycled([1, 2, 3, 4, 5]);
 
 console.log(...numberCycle);
@@ -95,25 +97,28 @@ Returns an iterable that will cycle through the array backward indefinitely.
 Here we create a simple tab component that can have the active view set or go forward/backward through the tabs.
 
 ```js
-const Cycled = require('cycled');
+import Cycled from 'cycled';
 
 class TabComponent {
+	#activeView;
+	#views;
+
 	constructor(views) {
-		this.activeView = views[0];
-		this.views = new Cycled(views);
+		this.#activeView = views[0];
+		this.#views = new Cycled(views);
 	}
 
 	setActiveView(view) {
-		this.activeView = view;
-		this.views.index = this.views.indexOf(view);
+		this.#activeView = view;
+		this.#views.index = this.views.indexOf(view);
 	}
 
 	nextView() {
-		setActiveView(this.views.next());
+		setActiveView(this.#views.next());
 	}
 
 	previousView() {
-		setActiveView(this.views.previous());
+		setActiveView(this.#views.previous());
 	}
 }
 
